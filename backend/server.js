@@ -1,12 +1,6 @@
-import app from "./app.js"
-import connectDatabase from "./database.js";
-import dotenv from "dotenv";
+const app = require("./app");
+const connectDatabase = require("./database");
 
-dotenv.config({path:"backend/config/config.env"});
-
-app.get("/",()=>{
-    console.log("Home");
-})
 
 connectDatabase();
 
