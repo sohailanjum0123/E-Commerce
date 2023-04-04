@@ -24,10 +24,7 @@ exports.updateProduct = async (req,res,next)=>{
     let product = await Product.findById(req.params.id);
 
     if(!product){
-        req.status(500).json({
-            success:false,
-            message:"Product not found"
-        })
+        return next( new ErrorHander("product not found",404))
     }
 
     product = await Product.findByIdAndUpdate(req.params.id,req.body,{
@@ -48,10 +45,7 @@ exports.deleteProduct = async(req,res,next) =>{
     const product = await Product.findById(req.params.id);
 
     if(!product){
-        res.status(500).json({
-            success:false,
-            message:"Product Not Found"
-        })
+        return next( new ErrorHander("product not found",404))
     }
 
        
