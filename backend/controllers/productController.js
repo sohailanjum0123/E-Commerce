@@ -1,5 +1,5 @@
 const Product = require("../models/productModel");
-const ErrorHander = require("../utils/errorHander");
+const ErrorHander = require("../utils/errorHandler");
 
 
 exports.createProduct = async(req,res,next) =>{
