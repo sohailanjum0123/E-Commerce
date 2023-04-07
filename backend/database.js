@@ -7,7 +7,7 @@ const connectDatabase = () => {
       console.log(`MongoDB is connected with server ${data.connection.host}`);
     })
     // .catch((err) => {
-    //   console.log(err);     due to unhandled promise rejection in server.js file
+    //   console.log(err);    // due to unhandled promise rejection in server.js file
     // });
 };
 
