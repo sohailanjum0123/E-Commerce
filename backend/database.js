@@ -6,9 +6,9 @@ const connectDatabase = () => {
     .then((data) => {
       console.log(`MongoDB is connected with server ${data.connection.host}`);
     })
-    .catch((err) => {
-      console.log(err);
-    });
+    // .catch((err) => {
+    //   console.log(err);     due to unhandled promise rejection in server.js file
+    // });
 };
 
 module.exports = connectDatabase;
